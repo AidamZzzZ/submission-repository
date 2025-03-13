@@ -1,4 +1,4 @@
-Tarea 0.6
+Tarea 0.4
 
 ```mermaid
 sequenceDiagram
@@ -31,4 +31,31 @@ sequenceDiagram
     activate server
     server-->>browser: JSON... [{"content": "test","date": "2025-03-12T23:38:41.244Z"}]
 
+```
+
+Tarea 0.5
+```mermaid
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+    activate server
+    server-->>browser: Documento HTML
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    activate server
+    server-->>browser: Archivo CSS
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+    activate server
+    server-->>browser: Archivo JavaScript
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate server
+    server-->>browser: [{ "content": "Hola mundo", date: "2025/03/12..." }]
+    deactivate server
 ```
