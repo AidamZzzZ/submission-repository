@@ -59,3 +59,16 @@ sequenceDiagram
     server-->>browser: [{ "content": "Hola mundo", date: "2025/03/12..." }]
     deactivate server
 ```
+
+Tarea 0.6
+```mermaid
+sequenceDiagram
+    participant browser
+    participant server
+
+    Note right of browser: El usuario ingresa un texto en el input del formulario y le da al boton save
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa  
+    activate server
+    server-->>browser: Envia los datos como una cadena JSON
+```
