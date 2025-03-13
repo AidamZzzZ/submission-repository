@@ -1,3 +1,5 @@
+Tarea 0.6
+
 ```mermaid
 sequenceDiagram
     participant browser
