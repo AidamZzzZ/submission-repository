@@ -64,6 +64,12 @@ const App = () => {
           messageErrorActivation(response.name)
           setPersons(persons.concat(response))
         })
+        .catch(error => {
+          setAddedMessage(error.response.data.error)
+          setTimeout(() => {
+            setAddedMessage(null)
+          }, 5000)
+        })
     }
 
     setNewName('')
